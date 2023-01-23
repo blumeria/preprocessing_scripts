@@ -40,7 +40,7 @@ def process_flatfile(flatfile, taxid, descr):
     with open(file_out, 'w') as f_out:
         for seq_record in SeqIO.parse(open(flatfile, mode='r'), 'fasta'):
             newseq = add_id(seq_record, taxid, descr)
-            r = SeqIO.write(newseq, file_out, 'fasta')
+            r = SeqIO.write(newseq, f_out, 'fasta')
             if r!=1: print('Error while writing sequence:  ' + newseq.id)
 
 def main():
