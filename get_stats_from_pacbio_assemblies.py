@@ -43,6 +43,10 @@ def loop_folder(mypath):
         print(dir)
         path = mypath + '/' + dir
         #print(path)
+        nrctgs=''
+        nrcompctgs=''
+        meancov=''
+        missingbp=''
         try:
             (nrctgs, nrcompctgs) = process_assembly(path)
             #print("{} {}".format(nrctgs, nrcompctgs))
